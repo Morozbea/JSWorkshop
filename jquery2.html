@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery Exempel 1</title>
+<script>
+
+    $(document).ready(function() {
+        $(".knapp_textmassa").click(function() {
+            $(".textmassa").toggle();
+          })
+          $(".knapp_rubrik").click(function(){
+              $ny_rubrik= $(".rubrik_text").val();
+              $("#huvudrubrik").text($ny_rubrik);
+          })
+          $(".knapp_lista").click(function(){
+              $(".shopping_lista").append("<li>Pannkakor</li>");
+          })
+    })
+
+
+</script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+<header>
+    <h1>jQuery Exempel 2</h1>  
+    <h2>använda getters och setters</h2> 
+</header>
+<section>
+<button class="knapp_textmassa">Visa/dölj texten</button>
+<div class="textmassa">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non velit sagittis, accumsan ante eu, ultricies metus. Mauris ut velit aliquam, fringilla justo at, porta felis. Morbi aliquam quam sit amet consequat vulputate. Vestibulum in maximus magna, sit amet scelerisque mi. Etiam metus elit, auctor vitae tellus nec, tempor auctor tellus. Vestibulum malesuada risus vel arcu euismod, a congue metus consectetur. Nunc lacinia dolor et est consectetur imperdiet.
+        Suspendisse consectetur, libero a sodales efficitur, velit dolor laoreet libero, quis volutpat lectus turpis vel erat. Aenean pharetra consectetur libero, ut egestas est scelerisque vitae. Vivamus gravida mi lorem, suscipit auctor est consectetur ac. Mauris magna ligula, maximus ut ultrices eu, tristique et urna. Vestibulum placerat imperdiet ipsum efficitur posuere. Integer ut felis lectus. Maecenas fermentum massa nibh. Sed et posuere turpis.
+        Fusce placerat sodales augue eget varius. Sed tincidunt non urna vel scelerisque. Nam venenatis consectetur ultrices. Donec nunc ligula, pretium id sem id, dignissim facilisis nulla. Sed vel dapibus nibh. Aliquam sed nulla vehicula, pulvinar nulla vitae, cursus quam. Nam id leo ac justo posuere hendrerit in in ante. Sed vulputate lacus nibh, sit amet posuere enim vulputate id. Sed at commodo magna. Quisque sed dignissim lectus.
+</div>
+
+<div class="divider"></div>
+
+<input type="text" class="rubrik_text"/>
+<button class="knapp_rubrik">Sätt ny rubrik</button>
+<h2 id="huvudrubrik">Gammal Rubrik</h2>
+
+<div class="divider"></div>
+
+<button class="knapp_lista">Lägg till i listan</button>
+<ul class="shopping_lista">
+<li>Mjölk</li>
+<li>Bröd</li>
+<li>Smör</li>
+<li>Jucie</li>
+<li>Socker</li>
+ </ul>
+
+
+
+
+
+</section>
+    </div>
+
+
+</body>
+
+</html>
